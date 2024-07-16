@@ -9,7 +9,7 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-7986374.979364, -3960737.758026, -7921127.374573, -3913942.494454], map.getSize());
+map.getView().fit([-7962258.842999, -3949125.497228, -7932135.212607, -3927529.019143], map.getSize());
 
 ////controls container
 
@@ -817,6 +817,17 @@ if (elementToMove && parentElement) {
 
 //layer search
 
+var searchLayer = new SearchLayer({
+    layer: lyr_RedHidrografica_3,
+    colName: 'Nombre',
+    zoom: 10,
+    collapsed: true,
+    map: map
+});
+map.addControl(searchLayer);
+document.getElementsByClassName('search-layer')[0].getElementsByTagName('button')[0].className += ' fa fa-binoculars';
+document.getElementsByClassName('search-layer-input-search')[0].placeholder = 'Search feature ...';
+    
 
 //scalebar
 

@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_RedHidrografica_3 = function(feature, resolution){
+var style_Subcuenca_7 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -16,12 +16,12 @@ var style_RedHidrografica_3 = function(feature, resolution){
     var textAlign = "left";
     var offsetX = 8;
     var offsetY = 3;
-    var placement = 'line';
+    var placement = 'point';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,98,226,0.23921568627450981)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.748}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,105,63,1.0)', lineDash: [6.992,3.496], lineCap: 'square', lineJoin: 'miter', width: 1.748}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
